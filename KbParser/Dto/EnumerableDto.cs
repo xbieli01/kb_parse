@@ -13,7 +13,7 @@ namespace KbParser.Dto
         /// <summary>
         /// kolekcia zaznamov v poli
         /// </summary>
-        public ICollection<T> Items { get; set; }
+        public List<T> Items { get; set; }
 
         /// <summary>
         /// vytvori novu prazdnu instanciu 

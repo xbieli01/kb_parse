@@ -1,6 +1,6 @@
 ﻿namespace KbParser.Dto
 {
-    public class LcDayCelebrationGroup
+    public class LcDayCelebrationGroupDto
     {
         public string GroupTitle { get; set; }
         public EnumerableDto<LcDayCelebrationGroupReadingDto> Readings { get; set; }

@@ -2,10 +2,10 @@
 {
     public class LcDayCelebrationHeadDto
     {
-        private string LiturgicalColor { get; set; }
+        public string LiturgicalColor { get; set; }
 
-        private string Solemnity { get; set; }
+        public string Solemnity { get; set; }
 
-        private string Title { get; set; }
+        public string Title { get; set; }
     }
 }

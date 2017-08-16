@@ -10,7 +10,7 @@ namespace KbParser.Dto
     {
         public string Memo { get; set; }
         public EnumerableDto<LcDayCelebrationHeadDto> Heads { get; set; }
-        public EnumerableDto<LcDayCelebrationGroup> Groups { get; set; }
+        public EnumerableDto<LcDayCelebrationGroupDto> Groups { get; set; }
         public string Directory { get; set; }
     }
 }

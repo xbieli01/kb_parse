@@ -37,8 +37,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoreParser.cs" />
+    <Compile Include="Dto\EnumerableExtension.cs" />
     <Compile Include="Dto\LcDayCelebrationDto.cs" />
-    <Compile Include="Dto\LcDayCelebrationGroup.cs" />
+    <Compile Include="Dto\LcDayCelebrationGroupDto.cs" />
     <Compile Include="Dto\LcDayCelebrationGroupGospelDto.cs" />
     <Compile Include="Dto\LcDayCelebrationGroupPsalmDto.cs" />
     <Compile Include="Dto\LcDayCelebrationGroupReadingDto.cs" />
@@ -48,6 +49,7 @@
     <Compile Include="Dto\LcKbsDto.cs" />
     <Compile Include="Dto\TextDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlHelpers\XmlExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
