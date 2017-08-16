@@ -17,21 +17,31 @@ namespace Test
         {
             var client = new WebClient();
             client.Encoding = Encoding.UTF8;
-            var data = client.DownloadStringTaskAsync("https://lc.kbs.sk/?mesiac=201708&format=xml").GetAwaiter().GetResult();
 
-            LcKbsDto mapped = CoreParser.Instance.MapStringData(data).GetAwaiter().GetResult();
+            var date = DateTime.Now;
 
-            XmlSerializer ser = new XmlSerializer(typeof(List<LcDayDto>));
-            string res = string.Empty;
-
-            using (var writer = new StringWriter())
+            for (int i = 1; i < 30; i++)
             {
-                ser.Serialize(writer, mapped.Days.Values.ToList());
-                //ser.Serialize(writer, mapped.Days.Values.Where(i => i.Celebrations.Items.Where(r => r.Groups.Items.Any()).Any()).ToList());
-                res = writer.ToString();
+                var data = client.DownloadStringTaskAsync(string.Format("https://lc.kbs.sk/?mesiac={0}&format=xml", date.ToString("yyyyMM"))).GetAwaiter().GetResult();
+                
+                LcKbsDto mapped = CoreParser.Instance.MapStringData(data).GetAwaiter().GetResult();
+
+                XmlSerializer ser = new XmlSerializer(typeof(List<LcDayDto>));
+                string res = string.Empty;
+
+                using (var writer = new StringWriter())
+                {
+                    ser.Serialize(writer, mapped.Days.Values.ToList());
+                    //ser.Serialize(writer, mapped.Days.Values.Where(i => i.Celebrations.Items.Where(r => r.Groups.Items.Any()).Any()).ToList());
+                    res = writer.ToString();
+                }
+
+                Console.WriteLine(res);
+
+                date = date.AddMonths(1);
             }
 
-            Console.WriteLine(res);
+            
         }
     }
 }

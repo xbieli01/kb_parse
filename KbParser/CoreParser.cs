@@ -6,6 +6,7 @@ using KbParser.Dto;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using KbParser.XmlHelpers;
+using System.Text.RegularExpressions;
 
 namespace KbParser
 {
@@ -35,11 +36,17 @@ namespace KbParser
 
         public async Task<LcKbsDto> MapStringData(string data)
         {
+            data = CleanData(data);
             var doc = XDocument.Parse(data);
 
             var result = MapLc(doc.Element("lc"));
 
             return await Task.FromResult<LcKbsDto>(result);
+        }
+
+        private string CleanData(string data)
+        {
+            return Regex.Replace(data, "&.*?;", string.Empty);
         }
 
         #region Mappers
