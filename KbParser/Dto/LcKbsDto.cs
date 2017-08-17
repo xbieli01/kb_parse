@@ -8,6 +8,11 @@ namespace KbParser.Dto
 {
     public class LcKbsDto
     {
+        public LcKbsDto()
+        {
+            Days = new Dictionary<DateTime, LcDayDto>();
+        }
+
         public Dictionary<DateTime, LcDayDto> Days { get; set; }
     }
 }

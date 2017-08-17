@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KbParser", "KbParser.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\Test\Test.csproj", "{D6FFF1E8-5780-4D34-97F2-4DB1D2B22809}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KbStorage", "..\KbStorage\KbStorage.csproj", "{B4437732-5D0A-43AF-B39C-4F3AF7704B50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D6FFF1E8-5780-4D34-97F2-4DB1D2B22809}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6FFF1E8-5780-4D34-97F2-4DB1D2B22809}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6FFF1E8-5780-4D34-97F2-4DB1D2B22809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4437732-5D0A-43AF-B39C-4F3AF7704B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4437732-5D0A-43AF-B39C-4F3AF7704B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4437732-5D0A-43AF-B39C-4F3AF7704B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4437732-5D0A-43AF-B39C-4F3AF7704B50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
